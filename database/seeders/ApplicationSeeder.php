@@ -1,0 +1,188 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+
+class ApplicationSeeder extends Seeder
+{
+    public function run()
+    {
+        DB::table('applications')->insert([
+            [
+                'name' => 'SecureApp',
+                'description' => 'A secure web application for managing user data.',
+                'requirements' => json_encode(['PHP >= 8.0', 'MySQL >= 5.7', 'Composer']),
+                'guides' => json_encode([
+                    'Step 1' => 'Clone the repository from GitHub.',
+                    'Step 2' => 'Run `composer install` to install dependencies.',
+                    'Step 3' => 'Configure `.env` file for database connection.',
+                    'Step 4' => 'Run `php artisan migrate` to set up the database.',
+                ]),
+                'source_code_link' => 'https://github.com/yourcompany/secureapp',
+                'file_path' => '/storage/secureapp.zip',
+                'thumbnail' => '/images/thumbnails/secureapp.png',
+                'latest_version' => '1.2.0',
+                'status' => 'active',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'EcomStore',
+                'description' => 'An e-commerce platform for small businesses.',
+                'requirements' => json_encode(['PHP >= 8.1', 'PostgreSQL >= 12', 'Redis']),
+                'guides' => json_encode([
+                    'Step 1' => 'Fork the repository from GitHub.',
+                    'Step 2' => 'Install dependencies using `composer` and `npm`.',
+                    'Step 3' => 'Run `php artisan serve` to start the development server.',
+                ]),
+                'source_code_link' => 'https://github.com/yourcompany/ecomstore',
+                'file_path' => '/storage/ecomstore.zip',
+                'thumbnail' => '/images/thumbnails/ecomstore.png',
+                'latest_version' => '2.0.3',
+                'status' => 'in-development',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'TaskManager',
+                'description' => 'A project management tool for teams.',
+                'requirements' => json_encode(['Node.js >= 16', 'MongoDB >= 4.4']),
+                'guides' => json_encode([
+                    'Step 1' => 'Clone the repository.',
+                    'Step 2' => 'Run `npm install`.',
+                    'Step 3' => 'Configure `.env` for MongoDB connection.',
+                    'Step 4' => 'Run `npm start`.',
+                ]),
+                'source_code_link' => 'https://github.com/yourcompany/taskmanager',
+                'file_path' => '/storage/taskmanager.zip',
+                'thumbnail' => '/images/thumbnails/taskmanager.png',
+                'latest_version' => '3.1.0',
+                'status' => 'active',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'ChatApp',
+                'description' => 'A real-time chat application for businesses.',
+                'requirements' => json_encode(['PHP >= 8.0', 'Redis']),
+                'guides' => json_encode([
+                    'Step 1' => 'Clone the repository.',
+                    'Step 2' => 'Install dependencies with `composer`.',
+                    'Step 3' => 'Run Redis server.',
+                    'Step 4' => 'Start the app with `php artisan serve`.',
+                ]),
+                'source_code_link' => 'https://github.com/yourcompany/chatapp',
+                'file_path' => '/storage/chatapp.zip',
+                'thumbnail' => '/images/thumbnails/chatapp.png',
+                'latest_version' => '4.0.0',
+                'status' => 'active',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'InvoiceGenerator',
+                'description' => 'A tool to generate and manage invoices.',
+                'requirements' => json_encode(['Python >= 3.9']),
+                'guides' => json_encode([
+                    'Step 1' => 'Install Python dependencies with `pip install -r requirements.txt`.',
+                    'Step 2' => 'Run the application with `python app.py`.',
+                ]),
+                'source_code_link' => 'https://github.com/yourcompany/invoicegenerator',
+                'file_path' => '/storage/invoicegenerator.zip',
+                'thumbnail' => '/images/thumbnails/invoicegenerator.png',
+                'latest_version' => '2.5.4',
+                'status' => 'active',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'CRMTool',
+                'description' => 'A CRM tool for customer relationship management.',
+                'requirements' => json_encode(['PHP >= 8.1', 'MySQL >= 5.7']),
+                'guides' => json_encode([
+                    'Step 1' => 'Set up the database with `php artisan migrate`.',
+                    'Step 2' => 'Seed the database with demo data.',
+                    'Step 3' => 'Run `php artisan serve`.',
+                ]),
+                'source_code_link' => 'https://github.com/yourcompany/crmtool',
+                'file_path' => '/storage/crmtool.zip',
+                'thumbnail' => '/images/thumbnails/crmtool.png',
+                'latest_version' => '1.3.7',
+                'status' => 'active',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'EduLearn',
+                'description' => 'An e-learning platform for online courses.',
+                'requirements' => json_encode(['PHP >= 8.0', 'MySQL >= 8.0']),
+                'guides' => json_encode([
+                    'Step 1' => 'Clone the repo and set up `.env` file.',
+                    'Step 2' => 'Run migrations and seeders.',
+                    'Step 3' => 'Start the application.',
+                ]),
+                'source_code_link' => 'https://github.com/yourcompany/edulearn',
+                'file_path' => '/storage/edulearn.zip',
+                'thumbnail' => '/images/thumbnails/edulearn.png',
+                'latest_version' => '5.0.0',
+                'status' => 'active',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'HealthTracker',
+                'description' => 'A fitness and health tracking app.',
+                'requirements' => json_encode(['Node.js >= 16', 'PostgreSQL >= 13']),
+                'guides' => json_encode([
+                    'Step 1' => 'Run `npm install`.',
+                    'Step 2' => 'Set up PostgreSQL database.',
+                    'Step 3' => 'Start the server with `npm start`.',
+                ]),
+                'source_code_link' => 'https://github.com/yourcompany/healthtracker',
+                'file_path' => '/storage/healthtracker.zip',
+                'thumbnail' => '/images/thumbnails/healthtracker.png',
+                'latest_version' => '3.0.2',
+                'status' => 'in-development',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'JobBoard',
+                'description' => 'A job board application to post and apply for jobs.',
+                'requirements' => json_encode(['PHP >= 8.0', 'SQLite']),
+                'guides' => json_encode([
+                    'Step 1' => 'Clone the repository.',
+                    'Step 2' => 'Run `composer install`.',
+                    'Step 3' => 'Set up SQLite database.',
+                ]),
+                'source_code_link' => 'https://github.com/yourcompany/jobboard',
+                'file_path' => '/storage/jobboard.zip',
+                'thumbnail' => '/images/thumbnails/jobboard.png',
+                'latest_version' => '1.0.0',
+                'status' => 'active',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'NewsPortal',
+                'description' => 'A news portal to publish and read news articles.',
+                'requirements' => json_encode(['PHP >= 8.0', 'Redis']),
+                'guides' => json_encode([
+                    'Step 1' => 'Install dependencies.',
+                    'Step 2' => 'Configure `.env` file.',
+                    'Step 3' => 'Run the application.',
+                ]),
+                'source_code_link' => 'https://github.com/yourcompany/newsportal',
+                'file_path' => '/storage/newsportal.zip',
+                'thumbnail' => '/images/thumbnails/newsportal.png',
+                'latest_version' => '1.1.0',
+                'status' => 'active',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+        ]);
+    }
+}
